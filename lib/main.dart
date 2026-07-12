@@ -67,7 +67,7 @@ class FFTacticalPlannerApp extends StatelessWidget {
             bodyColor: AppColors.textPrimary,
             displayColor: AppColors.textPrimary,
           ),
-      pageTransitionsTheme: const PageTransitionsTheme(builders: {
+      pageTransitionsTheme: PageTransitionsTheme(builders: {
         TargetPlatform.android: ZoomPageTransitionsBuilder(),
         TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
       }),
