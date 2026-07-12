@@ -1,0 +1,50 @@
+name: ff_tactical_planner
+description: "FF Tactical Planner - Professional Esports Map Strategy Tool"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # State management
+  provider: ^6.1.2
+
+  # Local persistence for saved strategies (map, markers, drawings, zoom state)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.3
+  uuid: ^4.4.0
+
+  # Export strategy board as Ultra HD PNG (RepaintBoundary -> image)
+  image: ^4.2.0
+  gal: ^2.3.0            # saves exported PNG to device gallery
+  share_plus: ^9.0.0
+
+  # Smooth gesture handling for zoom/pan beyond stock InteractiveViewer limits
+  vector_math: ^2.1.4
+
+  # Haptics use Flutter's built-in `services.dart` HapticFeedback - no extra package needed.
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.11
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Every uploaded map is bundled as-is, full resolution, no recompression.
+  assets:
+    - assets/maps/map_bermuda.jpg
+    - assets/maps/map_kalahari.png
+    - assets/maps/map_nextera.jpg
+    - assets/maps/map_purgatory.jpg
+    - assets/maps/map_solara.jpg
+    - assets/icons/
